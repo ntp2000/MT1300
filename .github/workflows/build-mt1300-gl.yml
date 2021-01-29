@@ -96,7 +96,6 @@ jobs:
         cp -rp simple-obfs /workdir/openwrt/package/lean/
         cp -rp v2ray-plugin /workdir/openwrt/package/lean/
         cp -rp v2ray /workdir/openwrt/package/lean/
-        cp -rp xray /workdir/openwrt/package/lean/
         cp -rp trojan /workdir/openwrt/package/lean/
         cp -rp ipt2socks /workdir/openwrt/package/lean/
         cp -rp redsocks2 /workdir/openwrt/package/lean/
