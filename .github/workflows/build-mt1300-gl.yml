@@ -69,6 +69,7 @@ jobs:
         df -hT $PWD
         git clone $REPO_OP -b $REPO_BRANCH openwrt
         git clone $REPO_LEDE -b master lede
+        git clone --depth=1 https://github.com/zcy85611/openwrt-luci-kcp-udp
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         ln -sf /workdir/lede $GITHUB_WORKSPACE/lede
         
@@ -101,6 +102,13 @@ jobs:
         cp -rp redsocks2 /workdir/openwrt/package/lean/
         cp -rp kcptun /workdir/openwrt/package/lean/
         cp -rp wget /workdir/openwrt/package/lean/
+        
+        cd /workdir/openwrt-luci-kcp-udp
+        cp -rp luci-udptools /workdir/openwrt/package/lean/
+        cp -rp udp2raw /workdir/openwrt/package/lean/
+        cp -rp udpspeeder /workdir/openwrt/package/lean/
+        cp -rp vlmcsd /workdir/openwrt/package/lean/
+        cp -rp luci-app-vlmcsd /workdir/openwrt/package/lean/
 
         cd /workdir/openwrt
         mv /workdir/openwrt/feeds/gli_pub/shadowsocks-libev /workdir/openwrt/feeds/gli_pub/shadowsocks-libev.bak
@@ -215,7 +223,12 @@ jobs:
         cp ../../../packages/mipsel_24kc/base/luci-i18n-ssr-plus-zh-cn_*.ipk ./ssrp/
         cp ../../../packages/mipsel_24kc/luci/luci-compat_*.ipk ./ssrp/
         cp ../../../packages/mipsel_24kc/luci/luci-lib-ipkg_*.ipk ./ssrp/
-
+        cp ../../../packages/mipsel_24kc/packages/udp2raw_*.ipk ./ssrp/
+        cp ../../../packages/mipsel_24kc/packages/udpspeeder_*.ipk ./ssrp/
+        cp ../../../packages/mipsel_24kc/packages/vlmcsd_*.ipk ./ssrp/
+        cp ../../../packages/mipsel_24kc/luci/luci-udptools_*.ipk ./ssrp/
+        cp ../../../packages/mipsel_24kc/luci/luci-app-vlmcsd_*.ipk ./ssrp/
+                                
         cat << EOF > ./ssrp/install-ssrp.sh
         opkg update
         opkg install luci luci-i18n-base-zh-cn ttyd luci-app-ttyd wget
