@@ -223,13 +223,14 @@ jobs:
         cp ../../../packages/mipsel_24kc/base/luci-i18n-ssr-plus-zh-cn_*.ipk ./ssrp/
         cp ../../../packages/mipsel_24kc/luci/luci-compat_*.ipk ./ssrp/
         cp ../../../packages/mipsel_24kc/luci/luci-lib-ipkg_*.ipk ./ssrp/
-        cp ../../../packages/mipsel_24kc/packages/*udp2raw*.ipk ./ssrp/
-        cp ../../../packages/mipsel_24kc/packages/udpspeeder_*.ipk ./ssrp/
-        cp ../../../packages/mipsel_24kc/packages/vlmcsd_*.ipk ./ssrp/
-        cp ../../../packages/mipsel_24kc/luci/luci-udptools_*.ipk ./ssrp/
-        cp ../../../packages/mipsel_24kc/luci/luci-app-vlmcsd_*.ipk ./ssrp/
+        cp ../../../packages/mipsel_24kc/base/udp2raw-tunnel_.ipk ./ssrp/
+        cp ../../../packages/mipsel_24kc/base/udpspeeder_*.ipk ./ssrp/
+        cp ../../../packages/mipsel_24kc/base/vlmcsd_*.ipk ./ssrp/
+        cp ../../../packages/mipsel_24kc/base/luci-udptools_*.ipk ./ssrp/
+        cp ../../../packages/mipsel_24kc/base/luci-app-vlmcsd_*.ipk ./ssrp/
         cp ../../../packages/mipsel_24kc/luci/*wireguard*.ipk ./ssrp/
-                                        
+        cp ../../../packages/mipsel_24kc/base/*wireguard*.ipk ./ssrp/
+                                                
         cat << EOF > ./ssrp/install-ssrp.sh
         opkg update
         opkg install luci luci-i18n-base-zh-cn ttyd luci-app-ttyd wget
