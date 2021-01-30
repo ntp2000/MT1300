@@ -223,7 +223,7 @@ jobs:
         cp ../../../packages/mipsel_24kc/base/luci-i18n-ssr-plus-zh-cn_*.ipk ./ssrp/
         cp ../../../packages/mipsel_24kc/luci/luci-compat_*.ipk ./ssrp/
         cp ../../../packages/mipsel_24kc/luci/luci-lib-ipkg_*.ipk ./ssrp/
-        cp ../../../packages/mipsel_24kc/packages/udp2raw-tunnel*.ipk ./ssrp/
+        cp ../../../packages/mipsel_24kc/packages/*udp2raw*.ipk ./ssrp/
         cp ../../../packages/mipsel_24kc/packages/udpspeeder_*.ipk ./ssrp/
         cp ../../../packages/mipsel_24kc/packages/vlmcsd_*.ipk ./ssrp/
         cp ../../../packages/mipsel_24kc/luci/luci-udptools_*.ipk ./ssrp/
