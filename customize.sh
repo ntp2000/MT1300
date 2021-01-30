@@ -21,3 +21,5 @@ sed -i 's/set wireless.default_radio\${devidx}.ssid=OpenWrt/set wireless.default
 # Forced WiFi to enable
 sed -i 's/set wireless.radio\${devidx}.disabled=1/set wireless.radio\${devidx}.disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
+# Fix Wget-ssl missing
+sed -i 's/wget-ssl/wget/g' /workdir/openwrt/package/lean/helloworld/luci-app-ssr-plus/Makefile
