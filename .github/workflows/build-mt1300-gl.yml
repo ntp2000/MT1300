@@ -228,7 +228,8 @@ jobs:
         cp ../../../packages/mipsel_24kc/packages/vlmcsd_*.ipk ./ssrp/
         cp ../../../packages/mipsel_24kc/luci/luci-udptools_*.ipk ./ssrp/
         cp ../../../packages/mipsel_24kc/luci/luci-app-vlmcsd_*.ipk ./ssrp/
-                                
+        cp ../../../packages/mipsel_24kc/luci/*wireguard*.ipk ./ssrp/
+                                        
         cat << EOF > ./ssrp/install-ssrp.sh
         opkg update
         opkg install luci luci-i18n-base-zh-cn ttyd luci-app-ttyd wget
