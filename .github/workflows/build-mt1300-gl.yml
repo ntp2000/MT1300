@@ -230,6 +230,9 @@ jobs:
         cp ../../../packages/mipsel_24kc/base/luci-app-vlmcsd_*.ipk ./ssrp/
         cp ../../../packages/mipsel_24kc/luci/*wireguard*.ipk ./ssrp/
         cp ../../../packages/mipsel_24kc/base/*wireguard*.ipk ./ssrp/
+        cp ../../../packages/mipsel_24kc/base/adbyby_*.ipk ./ssrp/
+        cp ../../../packages/mipsel_24kc/base/luci-app-adbyby-plus_*.ipk ./ssrp/
+        cp ../../../packages/mipsel_24kc/base/luci-app-adbyby-plus-zh-cn_*.ipk ./ssrp/        
         cp ../../../targets/ramips/mt7621/packages/kmod-udptunnel4_*.ipk ./ssrp/
         cp ../../../targets/ramips/mt7621/packages/kmod-udptunnel6_*.ipk ./ssrp/
         cp ../../../targets/ramips/mt7621/packages/kmod-wireguard_*.ipk ./ssrp/
